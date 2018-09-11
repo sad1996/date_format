@@ -254,7 +254,7 @@ String formatDate(DateTime date, List<String> formats) {
     } else if (format == H) {
       sb.write(date.hour);
     } else if (format == hh) {
-      sb.write(_digits(date.hour % 12, 2));
+      sb.write(_digits(date.hour == 12 ? date.hour : date.hour % 12, 2));
     } else if (format == h) {
       sb.write(date.hour % 12);
     } else if (format == am) {
